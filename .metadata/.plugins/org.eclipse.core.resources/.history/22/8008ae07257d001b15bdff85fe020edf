@@ -1,5 +1,0 @@
-package com.titannet.microservivios.commons.examenes.services;
-
-public interface ExamenService extends CommonService<Examen> {
-
-}

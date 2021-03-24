@@ -1,5 +1,0 @@
-package com.titannet.microservivios.commons.examenes.models.repository;
-
-public interface ExamenRepository {
-
-}
