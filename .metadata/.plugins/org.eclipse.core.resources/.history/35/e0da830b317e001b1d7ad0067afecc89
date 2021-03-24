@@ -1,0 +1,8 @@
+package com.titannet.microservivios.commons.examenes.services;
+
+import com.titannet.microservivios.commons.examenes.models.entity.Examen;
+import com.titannet.microservivios.commons.services.CommonService;
+
+public interface ExamenService extends CommonService<Examen> {
+
+}

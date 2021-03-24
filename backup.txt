@@ -1,0 +1,57 @@
+04-040-649110
+spring.application.name=microservicio-cursos
+server.port=${PORT:0}
+eureka.instance.instance-id=${spring.application.name}:${random.value}
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+
+
+
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+//@EnableEurekaClient
+
+
+alumno
+
+//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+//@EnableEurekaClient
+
+<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	spring.application.name=microservicio-usuarios
+server.port=${PORT:0}
+eureka.instance.instance-id=${spring.application.name}:${random.value}
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka

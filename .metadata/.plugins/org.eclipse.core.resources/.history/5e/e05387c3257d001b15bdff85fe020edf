@@ -1,0 +1,11 @@
+package com.titannet.microservivios.commons.examenes.services;
+
+import java.util.Optional;
+
+import com.titannet.microservivios.commons.examenes.models.entity.Examen;
+
+public class ExamenServiceImpl extends CommonServiceImpl<Examen,ExamenRepository> implements ExamenService {
+
+
+
+}
