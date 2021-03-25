@@ -46,6 +46,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\install\beto\udemy\microservicios\microservicios-examenes"/>
+			<item value="D:\install\beto\udemy\microservicios\microservicio-cursos"/>
+			<item value="D:\install\beto\udemy\microservicios\MicroserviciosZuul"/>
+			<item value="D:\install\beto\udemy\microservicios\MicroserviciosEureka"/>
+			<item value="D:\install\beto\udemy\microservicios\commons-examanes"/>
+			<item value="D:\install\beto\udemy\microservicios\commons-alumnos"/>
 			<item value="D:\install\beto\udemy\microservicios\commons"/>
 			<item value="D:\install\beto\udemy\microservicios\microservices"/>
 		</list>

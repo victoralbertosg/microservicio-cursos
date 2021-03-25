@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 
-//E=entidad R=repositorio
+//E=entidad R=repositorio( extiende de crud repositorio)
 public class CommonServiceImp<E, R extends CrudRepository<E,Long>> implements CommonService<E> {
 
 	@Autowired
