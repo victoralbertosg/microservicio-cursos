@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=microservicio-cursos/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.titannet.microservivios.app.cursos.models.repository{CursoRepository.java[CursoRepository" modifiers="513" timestamp="1613010150477"/>
-    <typeInfo handle="=commons/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.titannet.microservivios.commons.services{CommonServiceImp.java[CommonServiceImp" modifiers="1" timestamp="1612558634176"/>
-    <typeInfo handle="=microservicio-cursos/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.titannet.microservivios.app.cursos.services{CursoService.java[CursoService" modifiers="513" timestamp="1613010145890"/>
-    <typeInfo handle="=commons/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.titannet.microservivios.commonscontrollers{CommonController.java[CommonController" modifiers="1" timestamp="1613007872727"/>
-    <typeInfo handle="=microservicios-examenes/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.titannet.microservivios.commons.examenes.services{ExamenService.java[ExamenService" modifiers="513" timestamp="1615006623407"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
