@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.titannet.microservivios.app.cursos.models.entity.curso&apos; to &apos;Curso&apos;&#x0D;&#x0A;- Original project: &apos;microservicio-cursos&apos;&#x0D;&#x0A;- Original element: &apos;com.titannet.microservivios.app.cursos.models.entity.curso&apos;&#x0D;&#x0A;- Renamed element: &apos;com.titannet.microservivios.app.cursos.models.entity.Curso&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;curso&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.titannet.microservivios.app.cursos.models.entity{curso.java[curso" matchStrategy="1" name="Curso" qualified="false" references="true" similarDeclarations="false" stamp="1612753575728" textual="false" version="1.0"/>
-</session>
