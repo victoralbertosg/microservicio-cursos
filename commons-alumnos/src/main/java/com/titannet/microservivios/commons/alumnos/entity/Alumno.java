@@ -71,5 +71,17 @@ public class Alumno {
 		this.id = id;
 	}
 	
-	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (this==obj) {
+			return true;
+		}
+		if (!(obj instanceof Alumno)) {
+			return false;
+		}
+		Alumno a=(Alumno)obj;
+		
+		return this.id!=null && this.id.equals(a.getId());
+	}
 }

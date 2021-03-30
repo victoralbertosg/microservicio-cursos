@@ -33,7 +33,7 @@ public class CursoController extends CommonController<Curso, CursoService> {
 		return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(dbCurso));
 	}
 	
-	@PutMapping("/{id}/asignar-alumnos")
+	@PutMapping("{id}/asignar-alumnos")
 	public ResponseEntity<?> asignarAlumnos (@RequestBody List<Alumno> alumnos,@PathVariable Long id){
 		
 		Optional<Curso> o=this.service.findById(id);
@@ -77,6 +77,7 @@ public class CursoController extends CommonController<Curso, CursoService> {
 		return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(dbCurso));
 	}
 	
+	@PutMapping("/{id}/eliminar-examen")
 	public ResponseEntity<?>eliminarExamen(@RequestBody Examen examen, @PathVariable Long id){
 		Optional<Curso> o=this.service.findById(id);
 		if (!o.isPresent()) {

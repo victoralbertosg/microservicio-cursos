@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
@@ -35,8 +36,12 @@ private String nombre;
 private Date createAt;
 
 @JsonIgnoreProperties(value= {"examen"},allowSetters=true)
-@OneToMany(mappedBy="examen", fetch=FetchType.LAZY, cascade=CascadeType.ALL, orphanRemoval=true)
+@OneToMany(mappedBy="examen", fetch=FetchType.LAZY, cascade=CascadeType.ALL, orphanRemoval=true) //orphan elimina las pregutnas q no tengan examen
 private List<Pregunta> preguntas;
+
+@ManyToOne(fetch=FetchType.LAZY)
+private Asignatura asignatura;
+
 
 @PrePersist
 public void prePersist() {
@@ -82,7 +87,12 @@ public List<Pregunta> getPreguntas() {
 
 public void setPreguntas(List<Pregunta> preguntas) {
 	this.preguntas.clear();
-	preguntas.forEach(this::addPregunta);
+	/*preguntas.forEach(p->{
+	this.addPregunta(p);
+	});*/
+	//por cada pregunta ejecuta el metodo addPregunta, adiciona al lista preguntas y agrega examen el la table preguntas
+	preguntas.forEach(this::addPregunta);	
+	
 }	
 
 public void addPregunta(Pregunta pregunta) {
@@ -93,6 +103,18 @@ public void addPregunta(Pregunta pregunta) {
 public void removePregunta (Pregunta pregunta) {
 	this.preguntas.remove(pregunta);
 	pregunta.setExamen(null);	
+}
+
+
+
+
+public Asignatura getAsignatura() {
+	return asignatura;
+}
+
+
+public void setAsignatura(Asignatura asignatura) {
+	this.asignatura = asignatura;
 }
 
 
@@ -109,7 +131,5 @@ public boolean equals(Object obj) {
 	
 	return this.id !=null && this.id.equals(a.getId());
 }
-
-
 
 }
