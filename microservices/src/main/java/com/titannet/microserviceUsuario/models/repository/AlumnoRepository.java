@@ -14,8 +14,6 @@ import com.titannet.microservivios.commons.alumnos.entity.Alumno;
 public interface AlumnoRepository extends CrudRepository<Alumno, Long> {
 
 	@Query ("select a from Alumno a where a.nombre like %?1% or a.apellido like %?1%")
-	public List<Alumno> findByNombreOrApellido (String term);
+	public List<Alumno> findByNombreOrApellido (String term);		
 		
-	
-	
 }

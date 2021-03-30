@@ -22,13 +22,24 @@ public class ExamenController extends CommonController<Examen,ExamenService>{
 	
 		Optional <Examen> o= service.findById(id);
 		
-		if (!o.isPresent()) {
-			
+		if (!o.isPresent()) {			
 			return ResponseEntity.notFound().build();			
 		}
+		
 		Examen examenDb=o.get();
 		examenDb.setNombre(examen.getNombre());
 		
+		/*List<Pregunta> eliminadas=new ArrayList<>();			 
+			examenDb.getPreguntas().forEach(pdb->{
+				if (!examen.getPreguntas().contains(pbd)){
+					eliminadas.add(pbd);
+				}
+			});
+			eliminadas.foreach(p->{
+				examenDb.removePregunta(p);
+			})
+		*/
+		//sustituye al codigo anterior
 		examenDb.getPreguntas()
 		.stream()
 		.filter(pdb-> !examen.getPreguntas().contains(pdb))
@@ -42,4 +53,10 @@ public class ExamenController extends CommonController<Examen,ExamenService>{
 	public ResponseEntity<?> filtrar (@PathVariable String term){
 		return ResponseEntity.ok(service.findByNombre(term));
 	}
+	
+	@GetMapping ("/asignaturas")
+	public ResponseEntity<?> listarAsignaturas(){
+		return ResponseEntity.ok(service.findAllAsignaturas());
+	}
+	
 }

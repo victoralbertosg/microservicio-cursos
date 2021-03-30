@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -66,7 +67,7 @@ public void addAlumno (Alumno alumno) {
 }
 
 public void removeAlumno (Alumno alumno) {
-	this.alumnos.add(alumno);
+	this.alumnos.remove(alumno);
 }
 
 public Long getId() {
@@ -111,7 +112,7 @@ public void removeExamen (Examen examen) {
 	this.examenes.remove(examen);
 }
 
-@Override
+/*@Override
 public boolean equals(Object obj) {
 	
 	if (this==obj) {
@@ -123,8 +124,7 @@ public boolean equals(Object obj) {
 	Alumno a=(Alumno)obj;
 	
 	return this.id!=null && this.id.equals(a.getId());
-}
-
+}*/
 
 
 }
