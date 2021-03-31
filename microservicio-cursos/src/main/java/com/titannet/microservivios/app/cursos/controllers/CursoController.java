@@ -3,8 +3,11 @@ package com.titannet.microservivios.app.cursos.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -78,7 +81,10 @@ public class CursoController extends CommonController<Curso, CursoService> {
 	}
 	
 	@PutMapping("/{id}/eliminar-examen")
-	public ResponseEntity<?>eliminarExamen(@RequestBody Examen examen, @PathVariable Long id){
+	public ResponseEntity<?>eliminarExamen(@Valid @RequestBody Examen examen,BindingResult result, @PathVariable Long id){
+		if (result.hasErrors()) {
+			return this.validar(result);
+		}
 		Optional<Curso> o=this.service.findById(id);
 		if (!o.isPresent()) {
 			return ResponseEntity.notFound().build();
