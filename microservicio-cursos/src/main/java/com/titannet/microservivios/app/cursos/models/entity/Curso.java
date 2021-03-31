@@ -17,9 +17,9 @@ import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 import com.titannet.microservivios.commons.alumnos.entity.Alumno;
 import com.titannet.microservivios.commons.examenes.entity.Examen;
+
 
 @Entity
 @Table(name="cursos")
